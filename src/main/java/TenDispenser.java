@@ -1,4 +1,3 @@
-
 public class TenDispenser extends PaperCurrencyDispenser {
     public TenDispenser() {
         super();

@@ -5,15 +5,13 @@ public class Main {
         try {
             Scanner scanner = new Scanner(System.in);
             do {
-                System.out.println(
-
-                        "Please enter amount to withdraw (multiple of 10, max 1000$, Press Ctrl + C to end): ");
+                System.out.println("Please enter amount to withdraw (multiples of 10, max 1000$, Press Ctrl + C to end): ");
                 int amount = scanner.nextInt();
                 if (isValid(amount)) {
                     ATMWithdrawal.withdraw(new PaperCurrency(amount));
                 }
             } while (true);
-        }catch(Exception ex){
+        } catch (Exception ex) {
 
         }
     }
@@ -26,7 +24,7 @@ public class Main {
             System.out.println("Daily withdrawal limit is 1000$. Try again!");
             return false;
         } else if (amount % 10 != 0) {
-            System.out.println("Amount must be mutiple of 10s, Try again!");
+            System.out.println("Amount must be multiple of 10s, Try again!");
             return false;
         }
         return true;

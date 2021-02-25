@@ -8,7 +8,6 @@ public class ATMWithdrawal {
         static {
             // construct the chain of the currency dispensers in higher to lower
             // denomination
-            
             hundredDispenser.setNextDispenser(fiftyDispenser);
             fiftyDispenser.setNextDispenser(twentyDispenser);
             twentyDispenser.setNextDispenser(tenDispenser);
